@@ -5901,6 +5901,54 @@ button.module-image__border-overlay:focus {
   }
 }
 
+// Module: GifButton
+
+.module-gif-button__button {
+  border: 0;
+  border-radius: 4px;
+  background: none;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @include keyboard-mode {
+    &:focus {
+      outline: 2px solid $color-ultramarine;
+    }
+  }
+
+  outline: none;
+
+  &::after {
+    display: block;
+    content: '';
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+
+    @include light-theme {
+      @include color-svg('../images/icons/v3/gif/gif.svg', $color-gray-75);
+    }
+    @include dark-theme {
+      @include color-svg('../images/icons/v3/gif/gif.svg', $color-gray-15);
+    }
+  }
+
+  &--active {
+    @include light-theme() {
+      background: $color-gray-05;
+    }
+
+    @include dark-theme() {
+      background: $color-gray-75;
+    }
+
+    opacity: 1;
+  }
+}
+
 // Module: Emoji Picker
 
 %module-emoji-picker--ribbon {

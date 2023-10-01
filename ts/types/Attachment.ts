@@ -693,6 +693,10 @@ export function isVideoAttachment(attachment?: AttachmentType): boolean {
 }
 
 export function isGIF(attachments?: ReadonlyArray<AttachmentType>): boolean {
+  // eslint-disable-next-line no-console
+  console.log(attachments);
+  // eslint-disable-next-line no-debugger
+  debugger;
   if (!attachments || attachments.length !== 1) {
     return false;
   }

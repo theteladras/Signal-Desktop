@@ -2731,6 +2731,10 @@
     "messageformat": "Error opening sticker pack. Check your internet connection and try again.",
     "description": "The message that appears in the sticker preview modal when there is an error."
   },
+  "icu:GifPicker--empty": {
+    "messageformat": "No gif found",
+    "description": "Shown in the gif picker when a search yields 0 results."
+  },
   "icu:EmojiPicker--empty": {
     "messageformat": "No emoji found",
     "description": "Shown in the emoji picker when a search yields 0 results."

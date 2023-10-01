@@ -16,6 +16,7 @@ import type {
   EmojiButtonAPI,
 } from './emoji/EmojiButton';
 import { EmojiButton } from './emoji/EmojiButton';
+import { GifButton } from './gif/GifButton';
 import type { Props as StickerButtonProps } from './stickers/StickerButton';
 import { StickerButton } from './stickers/StickerButton';
 import type {
@@ -532,6 +533,13 @@ export function CompositionArea({
 
   const leftHandSideButtonsFragment = (
     <>
+      <div className="CompositionArea__button-cell">
+        <GifButton
+          i18n={i18n}
+          doSend={handleForceSend}
+          onClose={() => setComposerFocus(conversationId)}
+        />
+      </div>
       <div className="CompositionArea__button-cell">
         <EmojiButton
           emojiButtonApi={emojiButtonRef}

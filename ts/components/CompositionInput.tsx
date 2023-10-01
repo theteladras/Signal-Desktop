@@ -387,6 +387,8 @@ export function CompositionInput(props: Props): React.ReactElement {
   }, [disabled]);
 
   const onShortKeyEnter = (): boolean => {
+    // eslint-disable-next-line no-debugger
+    debugger;
     submit();
     return false;
   };
@@ -474,6 +476,8 @@ export function CompositionInput(props: Props): React.ReactElement {
       return true;
     }
 
+    // eslint-disable-next-line no-debugger
+    debugger;
     submit();
 
     return false;

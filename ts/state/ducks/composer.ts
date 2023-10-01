@@ -926,6 +926,54 @@ function addPendingAttachment(
   };
 }
 
+// function addUrlAttachment(
+//   conversationId: string,
+//   url: string
+// ): ThunkAction<
+//   void,
+//   RootStateType,
+//   unknown,
+//   NoopActionType | ShowToastActionType
+// > {
+//   return async (dispatch, getState) => {
+//     // Fetch the GIF or other content from the URL
+//     try {
+//       const response = await fetch(url);
+//       if (!response.ok) {
+//         throw new Error(`Failed to fetch attachment from ${url}`);
+//       }
+//       const blob = await response.blob();
+
+//       // Create an attachment object
+//       const attachment: AttachmentDraftType = {
+//         fileName: 'attachment.gif',
+//         size: blob.size,
+//         blob,
+//         pending: true,
+//       };
+
+//       // Add the attachment to the composer
+//       const addPendingAttachmentDispatcher = addPendingAttachment(
+//         conversationId,
+//         attachment
+//       );
+
+//       addPendingAttachmentDispatcher(dispatch, getState, undefined);
+//     } catch (error) {
+//       log.error(
+//         'addUrlAttachment: Error sending url attachment',
+//         Errors.toLogFormat(error)
+//       );
+//       dispatch({
+//         type: SHOW_TOAST,
+//         payload: {
+//           toastType: ToastType.UnableToLoadAttachment,
+//         },
+//       });
+//     }
+//   };
+// }
+
 export function setComposerFocus(
   conversationId: string
 ): ThunkAction<void, RootStateType, unknown, SetFocusActionType> {
